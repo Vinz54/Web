@@ -1,5 +1,4 @@
 <html lang="en" dir="ltr">
-
   <head>
     <meta charset="utf-8">
     <title>Welcome</title>
@@ -61,7 +60,7 @@
       .container .row .col-sm-4 img{
         width:50%;
         height:100%;
-        border-radius: 100%;
+        border-radius: 5%;
         border: double 7px silver;
       }
       .container .row .col-sm-4{
@@ -98,6 +97,10 @@
         justify-content: center;
         font-family: 'Dosis', cursive;
       }
+      .sr-only{
+        background-color: #3b3737;
+      }
+
 
 
     </style>
@@ -124,9 +127,11 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <span class="sr-only">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="#">Home</a>
           </li>
+          </span>
           <li class="nav-item">
             <a class="nav-link" href="carwebfeatures.html">Features</a>
           </li>
@@ -193,7 +198,7 @@
     <footer>
       <div class="row">
         <div class="col-sm-3">
-          Created 27-10-2022
+          Start created at 27-10-2022
         </div>
         <div class="col-sm-3">
           by a college student
@@ -201,7 +206,7 @@
       </div>
       <div class="row">
         <div class="col-sm-3">
-          Using HTML, CSS, Javascript
+          Using HTML, CSS, Javascript, Bootstrap
         </div>
         <div class="col-sm-3">
           For learning purpose
