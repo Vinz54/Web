@@ -3,8 +3,6 @@ var scene, camera, renderer, mobil;
 init();
 
 function init(){
-  //const assetPath = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/2666677/';
-
   scene = new THREE.Scene();
   scene.background = new THREE.Color(0x3b3737);
 
@@ -25,7 +23,7 @@ function init(){
   light.shadow.right = shadowSize;
   light.shadow.top = shadowSize;
   light.shadow.bottom = -shadowSize;
-  light.position.set( -1, 10, 6);
+  light.position.set( 0, 3, 5);
   scene.add(light);
 
   renderer = new THREE.WebGLRenderer({antialias: true});
@@ -38,9 +36,70 @@ function init(){
   controls.target.set(0,0,0);
   controls.update();
 
+//Button Left on click function
+  document.getElementById('btnL').onclick = function() {
+     document.getElementById('btnL').style.visibility="hidden";
+     document.getElementById('btnM').style.visibility="hidden";
+     document.getElementById('btnR').style.visibility="hidden";
+     document.getElementById("transformParts").className = "afterParts";
+     camera.position.set(-5,3,6);
+     controls.target.set(-2,0,0);
+     controls.update();
+  }
+  document.getElementById('returnBtnParts').onclick = function() {
+    document.getElementById('btnL').style.visibility="visible";
+    document.getElementById('btnM').style.visibility="visible";
+    document.getElementById('btnR').style.visibility="visible";
+    document.getElementById("transformParts").className = "informationParts";
+    camera.position.set(6, 5, 7);
+    controls.target.set(0,0,0);
+    controls.update();
+  }
+
+  //Button Middle on click function
+    document.getElementById('btnM').onclick = function() {
+       document.getElementById('btnL').style.visibility="hidden";
+       document.getElementById('btnM').style.visibility="hidden";
+       document.getElementById('btnR').style.visibility="hidden";
+       document.getElementById("transformName").className = "afterName";
+       camera.position.set(-2,4,-6);
+       controls.target.set(-2,0,0);
+       controls.update();
+    }
+    document.getElementById('returnBtnName').onclick = function() {
+      document.getElementById('btnL').style.visibility="visible";
+      document.getElementById('btnM').style.visibility="visible";
+      document.getElementById('btnR').style.visibility="visible";
+      document.getElementById("transformName").className = "informationName";
+      camera.position.set(6, 5, 7);
+      controls.target.set(0,0,0);
+      controls.update();
+    }
+
+
+//Btn Right on click Function
+  document.getElementById('btnR').onclick = function() {
+     document.getElementById('btnL').style.visibility="hidden";
+     document.getElementById('btnM').style.visibility="hidden";
+     document.getElementById('btnR').style.visibility="hidden";
+     document.getElementById("transformHistory").className = "afterHistory";
+     camera.position.set(1,2,6);
+     controls.target.set(1,0,0);
+     controls.update();
+  }
+  document.getElementById('returnBtnHistory').onclick = function() {
+    document.getElementById('btnL').style.visibility="visible";
+    document.getElementById('btnM').style.visibility="visible";
+    document.getElementById('btnR').style.visibility="visible";
+    document.getElementById("transformHistory").className = "informationHistory";
+    camera.position.set(6, 5, 7);
+    controls.target.set(0,0,0);
+    controls.update();
+  }
+
+
   //Load meshes here
   const loader = new THREE.GLTFLoader();
-  //loader.setPath(assetPath);
   loader.load('LamborghVen.glb', function(object){
     object.scene.traverse(function(child){
         if (child.isMesh){
