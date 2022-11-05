@@ -3,13 +3,16 @@
     <meta charset="utf-8">
     <title>Welcome</title>
     <style>
+      body{
+        overflow-x:hidden;
+      }
       .navbar-custom{
         background-color:Black;
         font-family: 'Dosis', cursive;
       }
       .container{
-        margin: 15px;
         color:white;
+        margin: 50px;
       }
       video {
         object-fit: cover;
@@ -53,13 +56,34 @@
       .container h2{
         text-align: center;
       }
-      .container hr{
-        border-top: 10px dotted #ffffff;
+
+      .container .centerHR{
+        display: flex;
+        flex-flow:row;
+        justify-content:center;
+        align-items:center;
+      }
+      .container .centerHR hr{
+        border-top: 10px dotted #ffffbb;
+        width:30%;
+      }
+
+      .container .row{
+        justify-content: center;
+        align-items: center;
+        height:400px;
+
       }
 
       .container .row .col-sm-4 img{
-        width:50%;
-        height:100%;
+        width:200px;
+        height:250px;
+        border-radius: 5%;
+        border: double 7px silver;
+      }
+      .container .row .col-sm-12 img{
+        width:200px;
+        height:250px;
         border-radius: 5%;
         border: double 7px silver;
       }
@@ -70,7 +94,13 @@
         text-align: justify;
         font-family: 'Dosis', sans-serif;
       }
-
+      .container .row .col-sm-12 p{
+        text-align: center;
+        font-family: 'Dosis', sans-serif;
+      }
+      .container .row .col-sm-12 {
+        text-align: center;
+      }
       .container .row .col-sm-8 h3{
         font-family: 'Dancing Script', cursive;
       }
@@ -102,7 +132,22 @@
       }
 
 
-
+      /*size of font*/
+      .video-wrapper .header p{
+        font-size: 20px;
+      }
+      .container .row .col-sm-8 p{
+        font-size: 20px;
+      }
+      .container .row .col-sm-12 p{
+        font-size:20px;
+      }
+      footer .row .col-sm-3 p{
+        font-size: 20px;
+      }
+      nav{
+        font-size: 20px;
+      }
     </style>
 
     <!--Font Dancing Script-->
@@ -114,6 +159,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap" rel="stylesheet">
+
+    <!--For animate AOS from https://michalsnik.github.io/aos/?utm_source=cdnjs&utm_medium=cdnjs_link&utm_campaign=cdnjs_library
+        Who ever made this library deserve gold medal, Thank you.
+    -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   </head>
@@ -152,9 +202,11 @@
     </div>
 
     <div class="container">
-      <hr>
-      <h2>In the past</h2>
-      <div class="row">
+      <div class="centerHR">
+        <hr>
+      </div>
+      <h2 data-aos="zoom-in" >In the past</h2>
+      <div class="row" data-aos="fade-left">
         <div class="col-sm-8">
           <h3>Benz Motorwagen 1886</h3>
           <p>
@@ -166,9 +218,11 @@
           <img src="https://drive.google.com/uc?id=1s2FAHX-7xytX5Rk_M16MSyhCr1H0FVpc" alt="">
         </div>
       </div>
-      <hr>
-      <h2>Why we here</h2>
-      <div class="row">
+      <div class="centerHR">
+        <hr>
+      </div>
+      <h2 data-aos="zoom-in">Why we here</h2>
+      <div class="row" data-aos="fade-right">
           <div class="col-sm-4">
             <img src="https://drive.google.com/uc?id=11QvebancFzdhqMt3ATx-M49iiirhPE1e" alt="">
           </div>
@@ -178,9 +232,11 @@
             we know transportation like car can help you save time, and do many other things like holiday with family.</p>
           </div>
         </div>
-      <hr>
-      <h2>Goals to achieve</h2>
-      <div class="row">
+        <div class="centerHR">
+          <hr>
+        </div>
+      <h2 data-aos="zoom-in">Goals to achieve</h2>
+      <div class="row" data-aos="fade-left">
           <div class="col-sm-8">
             <h3>Do the best</h3>
             <p>
@@ -192,7 +248,25 @@
             <img src="https://drive.google.com/uc?id=15OtdH4oFb-xQZyInDcvdyvfYh3RVFQkT" alt="">
           </div>
         </div>
+
+
+        <div class="centerHR">
+          <hr>
+        </div>
+        <h2 data-aos="zoom-in">Media</h2>
+        <div class="row" data-aos="fade-up">
+          <div class="col-sm-12">
+            <img src="https://drive.google.com/uc?id=10a14LInPiNXXEB5Kiuz9Q_bfC_WFtNXt" alt="">
+            <!--https://drive.google.com/file/d/12zdy8T31q5jsoPX4JZ0IkU0NlcjpyBNf/view?usp=share_link-->
+            <img src="https://drive.google.com/uc?id=16xPZ237Am0WJyo8jxMg-o5quUvVUUq_q" alt="">
+            <img src="https://drive.google.com/uc?id=12zdy8T31q5jsoPX4JZ0IkU0NlcjpyBNf" alt="">
+          </div>
+          <div class="col-sm-12">
+            <p>This is just screenshot of my shitty 3D model a long time ago XD. I like drawing but in 3D, so i try amazing Blender3D in steam and its free :)</p>
+          </div>
+        </div>
     </div>
+
     <footer>
       <div class="row">
         <div class="col-sm-3">
@@ -212,8 +286,23 @@
       </div>
     </footer>
 
+
+    <!--AOS script, thansk because its free-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Bootstrap template, Thanks because its free XD-->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+    <script>
+      AOS.init();
+      AOS.init({
+        offset:120,
+        duration:1000,
+        delay:800,
+      });
+    </script>
   </body>
 </html>
