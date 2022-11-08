@@ -1,142 +1,296 @@
-<!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Sl`Vinz</title>
+    <style>
+      body{
+        padding:0;
+        margin: 0;
+        overflow:hidden;
+        }
+        #SideAction{
+          width:20%;
+          background: #6699ff;
+          padding: 15px;
+          font-family: 'Dosis' ,cursive;
+          color:#ffffff;
+          position:absolute;
+          z-index: 100;
+          border: solid 5px #99bbff;
+        }
+        h2{
+          text-align: center;
+        }
+        h3{
+          text-align: center;
+          font-family:'Dancing Script',cursive;
+          font-weight: bold;
+          font-size: 22px;
+        }
+        p{
+          font-family: 'Dosis',cursive;
+          font-size: 18px;
+          font-weight: bold;
+        }
 
-<head>
-  <meta charset="utf-8">
-  <title>★ Sl`Vinz ★</title>
-  <style>
-    body{
-      background-color: #EAF6F6;
-      color:black;
-      font-family: 'Dosis', sans-serif;
-    }
-    hr{
-      background-color: white;
-      border-style: none;
-      border-top:dotted #32de84;
-      height: 5px;
-      width : 3%;
-    }
-    img{
-      border-radius: 50%;
-      border-style:double;
-      border-color:powderblue;
-      align-items: center;
+        .styleBtn{
+          border:solid 3px #ffffff;
+          outline:none;
+          background: #6699ff;
+          width:100%;
+          text-align: left;
+          font-size:20px;
+          font-family: 'Dancing script', cursive;
+          color:#ffffff;
+          margin-top:3px;
+          margin-bottom:3px;
+        }
+        .styleBtn:hover{
+          border:solid 5px #ffffff;
+        }
 
-    }
-    table{
-      margin-left: auto;
-      text-align: center;
-      margin-right: auto;
-      width:75%;
-    }
+        .right-btn{
+          text-align: right;
+        }
+        /*Chat box appear*/
+        .beforeName{
+          position:fixed;
+          width : 30%;
+          left: -50%;
+        }
+        .afterName{
+          border-radius: 3%;
+          position:fixed;
+          border : solid 5px #99bbff;
+          padding:10px;
+          left:30%;
+          margin :5px;
+          width : 40%;
+          bottom: 10%;
+          background-color: #6699ff;
+          color:#ffffff;
+          z-index: 100;
+          -webkit-animation: slideRL 0.7s forwards;
+          -moz-animation: slideRL 0.7s forwards;
+          animation: slideRL 0.7s forwards;
+        }
+        #returnBtnName{
+          border:solid 3px white;
+          border-radius: 5%;
+          padding:10px;
+          background-color: #6699ff;
+          color:#ffffff;
+          font-family: : 'Dosis',cursive:
+        }
 
-    h2{
-      text-align: center;
-      color:#32de84;
-      font-family: 'Dancing Script', cursive;
-    }
-    h3{
-      color:#32de84;
-      font-family: 'Dancing Script', cursive;
-    }
-    .icon{
-      text-size:200px;
-    }
-    .myName{
-      color:#32de84;
-    }
+        .beforeExp{
+          position:fixed;
+          width : 30%;
+          left: -50%;
+        }
+        .afterExp{
+          border-radius: 3%;
+          position:fixed;
+          border : solid 5px #99bbff;
+          padding:10px;
+          left:30%;
+          margin :5px;
+          width : 40%;
+          bottom: 10%;
+          background-color: #6699ff;
+          color:#ffffff;
+          z-index: 100;
+          -webkit-animation: slideLR 0.7s forwards;
+          -moz-animation: slideLR 0.7s forwards;
+          animation: slideLR 0.7s forwards;
+        }
 
-  </style>
+        #returnBtnExp{
+          border:solid 3px white;
+          border-radius: 5%;
+          padding:10px;
+          background-color: #6699ff;
+          color:#ffffff;
+          font-family: : 'Dosis',cursive:
+        }
 
-  <!--Font Dancing Script-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&display=swap" rel="stylesheet">
+        .beforeThought{
+          position:fixed;
+          width : 30%;
+          left: -50%;
+        }
+        .afterThought{
+          border-radius: 3%;
+          position:fixed;
+          border : solid 5px #99bbff;
+          padding:10px;
+          left:30%;
+          margin :5px;
+          width : 40%;
+          bottom: 10%;
+          background-color: #6699ff;
+          color:#ffffff;
+          z-index: 100;
+          -webkit-animation: slideTB 0.7s forwards;
+          -moz-animation: slideTB 0.7s forwards;
+          animation: slideTB 0.7s forwards;
+        }
 
-  <!--Font D-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap" rel="stylesheet">
+        #returnBtnThought{
+          border:solid 3px white;
+          border-radius: 5%;
+          padding:10px;
+          background-color: #6699ff;
+          color:#ffffff;
+          font-family: : 'Dosis',cursive:
+        }
 
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
-</head>
+        .beforeUniv{
+          position:fixed;
+          width : 30%;
+          left: -50%;
+        }
+        .afterUniv{
+          border-radius: 3%;
+          position:fixed;
+          border : solid 5px #99bbff;
+          padding:10px;
+          left:30%;
+          margin :5px;
+          width : 40%;
+          bottom: 10%;
+          background-color: #6699ff;
+          color:#ffffff;
+          z-index: 100;
+          -webkit-animation: slideTB 0.7s forwards;
+          -moz-animation: slideTB 0.7s forwards;
+          animation: slideTB 0.7s forwards;
+        }
+        #returnBtnUniv{
+          border:solid 3px white;
+          border-radius: 5%;
+          padding:10px;
+          background-color: #6699ff;
+          color:#ffffff;
+          font-family: : 'Dosis',cursive:
+        }
+        /**Animation keyframes**/
+        /*Right to left*/
+        @-webkit-keyframes slideLR {
+          0% {transform: translateX(150%);}
+          100% {transform: translateX(0);}
+        }
+        @-moz-keyframes slideLR {
+          0% {transform: translateX(150%);}
+          100% {transform: translateX(0);}
+        }
+        @keyframes slideLR {
+          0% {transform: translateX(150%);}
+          100% {transform: translateX(0);}
+        }
 
-<body>
-  <table cellspacing="30">
-    <tr>
-      <td> <img src="https://tse3.mm.bing.net/th?id=OIP._BDqZnLqkxzGH02tMpHZBQHaEo&pid=Api&P=0" width="150px" alt=""></td>
-    </tr>
-    <tr>
-      <td>
-        <h2>Hi my name is <span class="myName">Alfin</span></h1>
-        <p><em>Basic <strong><a href="https://register.ukrida.ac.id/admisi/public/">Colege Student</a></strong></em></p>
-        <p>I usually use Windows as a Operating Systems and coding with a coffee. <br>Im also a GAMER.</p>
-      </td>
-    </tr>
-  </table>
-
-  <hr size="3" noshade>
-
-  <h2>What I can do.</h2>
-    <table cellspacing="20px">
-        <tr>
-          <td>
-            <img src="https://tse3.mm.bing.net/th?id=OIP._BDqZnLqkxzGH02tMpHZBQHaEo&pid=Api&P=0" width="150px" alt="">
-          </td>
-          <td>
-            <img src="https://www.pinclipart.com/picdir/middle/365-3652661_blue-eyes-clipart-spy-eye-png-download.png" width="100px" alt="">
-          </td>
-          <td>
-
-            <td>
-              <p>
-                <h3>Do what I can.</h3>
-              </p>
-              <p>
-                I like to keep it simple. My goals is do something faster than normal. This is for spend so much time with my family
-              </p>
-          </td>
-
-          </td>
-        </tr>
-    </table>
-
-
-  <hr size="3" noshade>
-
-  <h2>Experience</h2>
-  <table cellspacing="30px">
-    <tr>
-      <td>
-        <p>
-          I learn so much about website in my
-          university at the begining of 2020 until 2021, and i realise when i was
-          developing my first website it just like drawing in some page
-        </p>
-        <p>
-          I also learn from outside of the university
-          about Home Automation for my project, and it was awesome.
-        </p>
-      </td>
-      <td><img src="https://rekreartive.com/wp-content/uploads/2018/11/Logo-Ukrida-Universitas-Kristen-Krida-Wacana-Original.jpg" width="150px" alt="UKRIDA"/></td>
-    </tr>
-  </table>
+        /*Top To bottom*/
+        @-webkit-keyframes slideTB {
+          0% {transform: translateY(-150%);}
+          100% {transform: translateY(0);}
+        }
+        @-moz-keyframes slideTB {
+          0% {transform: translateY(-150%);}
+          100% {transform: translateY(0);}
+        }
+        @keyframes slideTB {
+          0% {transform: translateY(-150%);}
+          100% {transform: translateY(0);}
+        }
 
 
-  <hr size="3" noshade>
-  <h2>Discuss with me(Fictional).</h2>
-  <table cellspacing="30px">
-    <tr>
-      <td><a href="contactme.html"><img src="https://pngimg.com/uploads/gmail_logo/gmail_logo_PNG2.png" width="100px" alt="GMAIL"/></a></td>
-      <td>
-        <p>
-          I only use my gmail to learning something, i do use discord,
-          and whatsapp but i dont want to put it in here since this is just a practice website
-        </p>
-      </td>
-    </tr>
-  </table>
-</body>
+        /*Left to Right*/
+        @-webkit-keyframes slideRL{
+          0% {transform: translateX(-150%);}
+          100% {transform: translateX(0);}
+        }
+        @-moz-keyframes slideRL{
+          0% {transform: translateX(-150%);}
+          100% {transform: translateX(0);}
+        }
+        @keyframes slideRL{
+          0% {transform: translateX(-150%);}
+          100% {transform: translateX(0);}
+        }
 
+    </style>
+
+    <!--Font Dancing Script-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&display=swap" rel="stylesheet">
+
+    <!--Font Dosis-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="SideAction">
+      <h2>.:: Action ::.</h2>
+      <hr>
+      <p>
+        Thanks for coming to my website.
+      </p>
+      <button id="myName" class="styleBtn">My Name</button>
+      <button id="myExp" class="styleBtn">My experience</button>
+      <button id="myThought" class="styleBtn">My thoughts</button>
+      <button id="myUniversity" class="styleBtn">My university</button>
+      <button id="myUniversity" class="styleBtn">My project</button>
+    </div>
+
+  <div id="transformName" class="beforeName">
+    <h3>Alfin</h3>
+    <hr>
+    <p>Im just a colege student, i addicted to 3D game and also start a youtube with game as a content of my
+      youtube</p>
+
+      <div class="right-btn">
+          <button id="returnBtnName">Return</button>
+      </div>
+  </div>
+
+  <div id="transformExp" class="beforeExp">
+    <h3>Learning</h3>
+    <hr>
+    <p>I forgot to count how many error i got, but why im still using something that
+    i dont fully understand its because 3D is my hobby and this three make it happen in website.</p>
+
+      <div class="right-btn">
+          <button id="returnBtnExp">Return</button>
+      </div>
+  </div>
+
+  <div id="transformThought" class="beforeThought">
+    <h3>My Thoughts</h3>
+    <hr>
+    <p>I learn this from Brackeys while learning how to work with unity, you should see his tutorial unity in
+      youtube.</p>
+
+      <div class="right-btn">
+          <button id="returnBtnThought">Return</button>
+      </div>
+  </div>
+
+  <div id="transformUniv" class="beforeUniv">
+    <h3>UKRIDA</h3>
+    <hr>
+    <p>UKRIDA is my university. this is the place where i study basic of all thing in website, database, and game with greenfoot.</p>
+
+      <div class="right-btn">
+          <button id="returnBtnUniv">Return</button>
+      </div>
+  </div>
+
+    <!-- Three JS for 3D website, so much thanks for whoever made this. Because this ThreeJS realy usefull -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/106/three.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2666677/OrbitControls.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2666677/GLTFLoader.js"></script>
+    <script src="cvindex.js"></script>
+  </body>
 </html>
