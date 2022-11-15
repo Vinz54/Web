@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>.:: Login ::.</title>
+    <style>
+      body{
+        background: url(img/backgroundlogin.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+      .boxcenter{
+        width: 50%;
+        top: 25%;
+        left: 50%;
+        right:50%;
+        margin-left: -25%;
+        position:absolute;
+        background-color: rgba(1,0,1,0.5);
+        padding:20px;
+        border:solid 3px #ffffff;
+        border-radius: 3%;
+      }
+      .form-check{
+        margin:15px;
+      }
+
+      form{
+        color:#ffffff;
+        font-size: 20px;
+        font-family: "Dancing Script", cursive;
+      }
+      .form-control{
+        font-family: "Dosis", cursive;
+        font-weight: bold;
+      }
+      .rightitem{
+        text-align: right;
+      }
+      .modal{
+        color:#000000;
+      }
+      .modal form{
+        color:#000000;
+      }
+    </style>
+
+    <!--Font Dancing Script-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&display=swap" rel="stylesheet">
+
+    <!--Font Dosis-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap" rel="stylesheet">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="boxcenter">
+      <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          <small id="passwordHelp">We'll never share your password with anyone else.</small>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+           don't have an <a href="#" data-toggle="modal" data-target="#exampleModalCenter">Account?</a>
+        <div class="rightitem">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+
+      </form>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Registration Account</h5>
+
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Your Email">
+              </div>
+              <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" placeholder="Username">
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" class="form-control" id="phonenumber" placeholder="eg : 08124444444">
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password1" placeholder="Password">
+              </div>
+              <div class="form-group">
+                <label for="confirmPassword">Confirm password</label>
+                <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
+                <small id="passwordHelp">We'll never share your password with anyone else.</small>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <div class="rightitem">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
